@@ -3,6 +3,8 @@ package hw;
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -39,14 +41,15 @@ public class TestHelloWorld {
   }
 
   @Test
-  public void getMessageInList() { // this test is broken - fix it!
-    var list = Arrays.asList(fixture);
+  public void getMessageInList() {
+    List<HelloWorld> list = HelloWorld.getSampleList();
     assertEquals("hello world", list.get(1).getMessage());
   }
 
   @Test
-  public void getYearInList() { // this test is broken - fix it!
-    var list = Arrays.asList(fixture);
+  public void getYearInList() {
+    List<HelloWorld> list = HelloWorld.getSampleList();
     assertEquals(2025, list.get(1).getYear());
   }
+
 }
